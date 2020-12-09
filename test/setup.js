@@ -19,6 +19,7 @@ global.testTransform = (name, { filePath = fakePath} = {}) => {
       .filter(filename => filename.endsWith('.input.js'))
       .map(filename => filename.replace('.input.js', ''))
       .forEach(id => {
+ 
         const inputPath = `${fixturesPath}/${id}.input.js`;
         const outputPath = `${fixturesPath}/${id}.output.js`;
         const optionsPath = `${fixturesPath}/${id}.options.js`;

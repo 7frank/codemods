@@ -1,11 +1,12 @@
 {
-  "name": "direct-import-codemod",
+  "name": "7frank-codemods",
   "version": "0.0.1",
   "description": "Use direct imports to save JS bundle size",
   "main": "transforms/direct-import.js",
   "scripts": {
     "direct-import": "jscodeshift --parser flow --extensions js,jsx -t ./transforms/direct-import.js",
-    "test": "jest"
+    "test": "jest",
+    "dry-run": "jscodeshift -t ./transforms/import-codemod.js --extensions=ts --parser=ts ./src --print --dry"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,10 @@
   },
   "homepage": "https://github.com/limpbrains/direct-import-codemod#readme",
   "devDependencies": {
-    "jest": "^23.6.0"
+    "@material-ui/core": "^4.11.2",
+    "find-root": "^1.1.0",
+    "jest": "^23.6.0",
+    "resolve": "^1.19.0"
   },
   "dependencies": {
     "jscodeshift": "^0.6.3"
